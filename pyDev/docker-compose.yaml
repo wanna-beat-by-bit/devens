@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: pyDev
+    command: sh -c "echo 'python dev-container activated'; sleep infinity"
+    volumes: 
+      - ./:/app 
+
