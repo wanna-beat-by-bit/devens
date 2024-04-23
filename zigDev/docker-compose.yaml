@@ -1,0 +1,7 @@
+services:
+  zigdev:
+    build: .
+    volumes:
+      - .:/app
+    container_name: zigDev
+    command: sh -c "sleep infinity"
