@@ -6,3 +6,6 @@ dev-build:
 dev:
 	docker compose up verilogdev
 
+.PHONY: run
+run:
+	iverilog main.v -o main

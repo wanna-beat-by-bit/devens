@@ -1,4 +1,4 @@
-FROM ubuntu:latest  
+FROM ubuntu:latest
 RUN apt-get -y update && \
     apt-get install -y \
     make \
@@ -10,7 +10,8 @@ RUN apt-get -y update && \
     libreadline-dev \
     autoconf
 
-RUN git clone https://github.com/steveicarus/iverilog && \
+# RUN git clone https://github.com/steveicarus/iverilog && \
+RUN git clone --branch v11-branch https://github.com/steveicarus/iverilog.git && \
     cd iverilog && \
     autoconf && \
     ./configure && \
