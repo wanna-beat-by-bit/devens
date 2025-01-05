@@ -1,0 +1,17 @@
+services:
+  lowshit:
+    container_name: lowshit_dev
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    volumes:
+      - lowshit_vol:/app
+
+volumes:
+  lowshit_vol:
+    external: false
+    driver: local
+    driver_opts:
+      o: bind
+      type: None
+      device: ./
